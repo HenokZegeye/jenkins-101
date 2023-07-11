@@ -12,6 +12,8 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
+                export https_proxy=http://fihel1d-proxy.emea.nsn-net.net:8080
+                export http_proxy=http://fihel1d-proxy.emea.nsn-net.net:8080
                 cd myapp
                 pip install -r requirements.txt
                 '''
